@@ -1,0 +1,33 @@
+# Python virtual environment — recreate with: pip install -r requirements.txt
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Secrets / credentials — never commit these
+.env
+*.env
+secrets.py
+
+# Large generated files that can be reproduced by running the scripts
+# (comment out if you want outputs tracked in git)
+# outputs/*.png

@@ -28,8 +28,14 @@ Usage
   python scripts/03_data_quality.py
 """
 
+import sys
 import os
 import warnings
+
+# Force UTF-8 output so Unicode characters in print statements
+# render correctly on Windows terminals (cp1252 by default).
+sys.stdout.reconfigure(encoding="utf-8")
+
 import pandas as pd
 import numpy as np
 import matplotlib
@@ -159,7 +165,7 @@ df1_raw = load_csv("screen_time_attention_productivity.csv")
 target_bins = {"Below 18", "18\u201324"}
 df1 = df1_raw[df1_raw["Age Group"].isin(target_bins)].copy().reset_index(drop=True)
 df1.to_csv(os.path.join(FILTERED_DIR, "screen_time_attention_productivity_filtered.csv"), index=False)
-print(f"  DS1 filtered: {len(df1_raw)} → {len(df1)} rows  (kept Age Group in {{'Below 18','18–24'}})")
+print(f"  DS1 filtered: {len(df1_raw)} -> {len(df1)} rows  (kept Age Group in 'Below 18' or '18-24')")
 
 # ── DS2: student_habits_exam_performance ─────────────────────────────────────
 df2 = load_csv("student_habits_exam_performance.csv").copy()
