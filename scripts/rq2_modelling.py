@@ -1,9 +1,5 @@
 """
-rq2_modelling.py
-================
-DATA7001 – Social Media & Cognitive Functioning Project
---------------------------------------------------------
-Answers RQ2: "To what extent do student lifestyle habits predict
+RQ2: "To what extent do student lifestyle habits predict
 academic performance?"
 
 Dataset : dataset/filtered/student_habits_exam_performance_filtered.csv
@@ -24,10 +20,6 @@ Outputs saved to ./outputs/:
   rq2_rf_importances.png
   rq2_actual_vs_predicted.png
   rq2_model_comparison.csv
-
-Usage
------
-  python scripts/rq2_modelling.py
 """
 
 import sys
