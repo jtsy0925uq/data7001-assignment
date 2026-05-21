@@ -8,9 +8,8 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Jupyter checkpoints
+# Jupyter checkpoints (the checkpoints folder, NOT the notebooks themselves)
 .ipynb_checkpoints/
-*.ipynb
 
 # OS files
 .DS_Store
